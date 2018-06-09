@@ -1,0 +1,1 @@
+# MysqlDump written in Golang

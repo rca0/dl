@@ -2,4 +2,5 @@
 
 libraries | description
 --- | ---
-vault project | Customized image of Vault Project [https://vaultproject.io/] 
+vault | Custom image of Vault Project [https://vaultproject.io/] 
+mysqldump | Custom image for dump and restore in MySQL database
