@@ -2,7 +2,7 @@
 
 - [https://vaultproject.io/]
 
-IMAGE: `project/vault:latest`
+IMAGE: `rca0/vault:latest`
 
 - Standard directories:
 
