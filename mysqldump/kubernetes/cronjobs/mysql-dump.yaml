@@ -1,0 +1,39 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: mysqldump
+  namespace: database
+spec:
+  schedule: "30 4 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          nodeSelector:
+            kubernetes.io/hostname: database-node
+          containers:
+          - name: mysqldump
+            image: rca0/mysqldump:latest
+            env:
+              - name: DB_NAME
+                value: "databaseName"
+              - name: DB_HOST
+                value: "database.local"
+              - name: DB_USER
+                valueFrom:
+                  secretKeyRef:
+                    name: mysql-credentials
+                    key: user
+              - name: DB_PASS
+                valueFrom:
+                  secretKeyRef:
+                    name: mysql-credentials
+                    key: userpwd
+            volumeMounts:
+              - mountPath: /mysqldump
+                name: mysqldump
+          volumes:
+            - name: mysqldump
+              hostPath:
+                path: /db/backup/service-name
+          restartPolicy: OnFailure
