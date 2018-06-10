@@ -44,7 +44,7 @@ docker run \
         --privileged \
         -it \
         -p 8200:8200 \
-        -v $(pwd)/pki:/vault/pki ops/vault \
+        -v $(pwd)/pki:/vault/pki rca0/vault \
         server \
                 --tls-key-file=/vault/pki/vault.key \
                 --tls-crt-file=/vault/pki/vault.crt
@@ -61,7 +61,7 @@ docker run \
         --privileged \
         -it \
         -p 8200:8200 \
-        ops/vault
+        rca0/vault
 ```
 
 Example passing the volume:
@@ -72,5 +72,5 @@ docker run \
         -it \
         -p 8200:8200 \
         -v $(pwd)/pki:/vault/pki \
-        ops/vault
+        rca0/vault
 ```

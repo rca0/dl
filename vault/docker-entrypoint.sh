@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 set -eo pipefail
 
 function _showHelp() {
