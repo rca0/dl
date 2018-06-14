@@ -74,3 +74,21 @@ docker run \
         -v $(pwd)/pki:/vault/pki \
         rca0/vault
 ```
+
+## AWS S3 Storage
+
+- To configure AWS s3 storage into vault, it will be necessary to pass 4 parameters, the first is `s3` so that the script can identify that will be passed the AWS credentials, follows the others parameters, the next is `--access_key`, `--secret_key` and the last `--bucket`. These parameters will be synchronized with the Amazon Cloud, and will store the data vault.
+
+Follows the example: 
+
+```bash
+docker run \
+        --privileged \
+        -it \
+        -p 8200:8200 \
+        rca0/vault \
+        s3 \
+                --access_key="KADAODAJDJ2323IDODJD" \
+                --secret_key="FFFADADACCB4224DDFbD" \
+                --bucket="vault-bucket-us-east-1"
+```
