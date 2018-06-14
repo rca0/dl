@@ -11,9 +11,17 @@ function _showHelp() {
         server:
             --tls-key-file      "Pass the key file: vault.key".
             --tls-crt-file      "Pass the certificate file: /vault.crt".
-        
+            --access_key        "AWS Access Key"
+            --secret_key        "AWS Secret key"
+            --bucket            "AWS Bucket name"
+
         Example:
-            server --tls-key-file=/etc/certs/vault.key --tls-crt-file=/etc/certs/vault.crt
+            server \
+                --tls-key-file=/etc/certs/vault.key \
+                --tls-crt-file=/etc/certs/vault.crt \
+                --access_key="KADAODAJDJ2323IDODJD" \
+                --secret_key="FFFADADACCB4224DDFbD" \
+                --bucket="vault-bucket-us-east-1"
 
     If not pass server and tls files parameters it will run in mode default.
 
