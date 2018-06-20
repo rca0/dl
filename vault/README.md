@@ -107,3 +107,27 @@ docker run \
                 --secret_key="FFFADADACCB4224DDFbD" \
                 --bucket="vault-bucket-us-east-1"
 ```
+
+## Testing
+
+Define alias for vault:
+
+```bash
+alias vault='docker exec -it e267ce0c2b5d vault "$@"'
+```
+
+Writing and read:
+
+```bash
+# WRITE
+vault write -address=http://127.0.0.1:8200 secret/yeah value=my-value-yeah
+
+# READ
+vault read secret/yeah
+
+# RESULT
+Key             	Value
+---             	-----
+refresh_interval	2592000
+value           	my-value-yeah
+```
