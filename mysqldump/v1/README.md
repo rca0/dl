@@ -17,7 +17,6 @@ Common example with Docker:
 
 ```bash
 docker run --rm \
-           --privileged=true \
            --net=host \
            -e DB_HOST="database.domain.com" \
            -e DB_USER="myDbUser" \
@@ -32,7 +31,6 @@ Example:
 
 ```bash
 docker run --rm \
-           --privileged=true \
            --net=host \
            -e DB_HOST="database.domain.com" \
            -e DB_USER="myDbUser" \
@@ -46,7 +44,6 @@ Example:
 
 ```bash
 docker run --rm \
-           --privileged=true \
            --net=host \
            -e DB_HOST="database.domain.com" \
            -e DB_USER="myDbUser" \
@@ -66,7 +63,6 @@ Your database have to be in the volume path:
 
 ```bash
 docker run --rm \
-           --privileged=true \
            --net=host \
            -e DB_HOST="database.domain.com" \
            -e DB_USER="myDbUser" \
@@ -80,7 +76,6 @@ The files with extensions `<.sql>` have to be in your volume path:
 
 ```bash
 docker run --rm \
-           --privileged=true \
            --net=host \
            -e DB_HOST="database.domain.com" \
            -e DB_USER="myDbUser" \
@@ -94,7 +89,6 @@ Example:
 
 ```bash
 docker run --rm \
-           --privileged=true \
            --net=host \
            -e DB_HOST="database.domain.com" \
            -e DB_USER="myDbUser" \
