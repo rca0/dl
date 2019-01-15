@@ -41,7 +41,6 @@ You must specify the volume like this: `-v <local-dir>:<container-dir>`
 
 ```bash
 docker run \
-        --privileged \
         -it \
         -p 8200:8200 \
         -v $(pwd)/pki:/vault/pki rca0/vault \
@@ -58,7 +57,6 @@ Example without volume:
 
 ```bash
 docker run \
-        --privileged \
         -it \
         -p 8200:8200 \
         rca0/vault
@@ -68,7 +66,6 @@ Example passing the volume:
 
 ```bash
 docker run \
-        --privileged \
         -it \
         -p 8200:8200 \
         -v $(pwd)/pki:/vault/pki \
@@ -83,7 +80,6 @@ Follows the example:
 
 ```bash
 docker run \
-        --privileged \
         -it \
         -p 8200:8200 \
         -v $(pwd)/pki:/vault/pki rca0/vault \
@@ -99,7 +95,6 @@ Or if you don't want to pass the certificates, follow the standard example:
 
 ```bash
 docker run \
-        --privileged \
         -it \
         -p 8200:8200 \
         rca0/vault \
