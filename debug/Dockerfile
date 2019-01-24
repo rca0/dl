@@ -9,6 +9,7 @@ RUN set -ex && \
     python-dev \
     python3-dev \
     openssl-dev \
+    postgresql-dev \
     make \
     gcc \
     automake \
